@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array 10 Methods</title>
+    <link rel="shorcut icon" href="https://torquest.com/uploads/logos/array-logotype.png">
+</head>
+<script>
+
+    //1. Push
+    //Array push merupakan fungsi untuk menambahkan elemen data berupa 
+    //single elemen ataupun multi elemen berbentuk array ke database.
+    const chess = ['Queen', 'Rook', 'Bishop' ];
+    chess.push('Knight');
+    //Output: 4 
+    console.log(chess);
+    //Output ['Queen', 'Rook', 'Bishop', 'Knight']
+
+
+    //2. Pop
+    //Method pop merupakan kebalikan dari push, ia menghapus elemen terakhir dari suatu array dan mengembalikan elemen yang dihapus.
+    const color = ['Blue', 'White', 'Yellow', 'Red'];
+    color.pop();
+    //Output : 3
+    console.log(color);
+    //Output ['Blue', 'White', 'Yellow']
+    //Kalau ditulis pop lagi maka,
+    color.pop();
+    //Output : 2
+    console.log(color);
+    //Output ['Blue', 'White']
+
+
+    //3. Shift
+    //Method shift mirip dengan pop, tapi ia menghapus elemen yang pertama dari suatu array dan mengembalikan nilai yang dihapus.
+    const ayam = ['Rebus', 'Goreng', 'Gulai', 'Bakar'];
+    ayam.pop();
+    //'Rebus' akan dihilangkan
+    console.log(ayam);
+    //Output ['Goreng', 'Gulai', 'Bakar']
+
+    
+    //4. Unshift
+    //unshift akan menambah satu atau lebih elemen ke dalam suatu array, tapi method ini menambahkannya ke awal/depan array 
+    //yang dalam dunia komputer juga sering disebut sebagai prepend. Setelah menambahkan elemen ke depan array, 
+    //method unshift akan menambahkan jumlah baru array yang sudah berubah.
+    const buah = ['Jeruk', 'Anggur', 'Pepaya'];
+    buah.unshift('Melon', 'Alpukat');
+    //Output : 5
+    console.log(buah);
+    //Output ['Jeruk', 'Anggur', 'Pepaya', 'Melon', 'Alpukat']
+
+
+    //5. Splice
+    //Metode splice() mengubah konten array dengan menghapus atau mengganti elemen yang ada dan/atau menambahkan elemen baru di tempatnya
+    const bulan = ['Jan', 'March', 'April', 'June'];
+    bulan.splice(1,0,'Feb');
+    //Masukkan ke indeks 1
+    console.log(bulan);
+    //Output ['Jan', 'Feb', 'March', 'April', 'June']
+
+    bulan.splice(4,1,'May');
+    //Mengganti 1 element di indeks ke 4
+    console.log(bulan);
+    //Output ['Jan', 'Feb', 'March', 'April', 'May']
+
+
+    //6. Slice
+    //Metode slice memilih sebagian dari array dan mengembalikan array baru yang menyalin semua item dari awal hingga akhir indeks.
+    const negara = ['China', 'India', 'USA', 'Russia', 'Africa'];
+    console.log(negara.slice(1,3));
+    //Output ['India', 'USA'] 
+    console.log(negara.slice(2));
+    //Output ['USA', 'Russia', 'Africa']
+
+
+    //7. Includes
+    //includes(item, index) metode mencari item mulai dari indeks yang diberikan dan mengembalikan true jika ditemukan
+    //sebaliknya mengembalikan false.
+    const hewan = ['singa', 'harimau', 'kucing', 'monyet'];
+    //mencari singa di index 1
+    console.log(hewan.includes('singa', 1)); //false
+    //mencari singa di index 0
+    console.log(hewan.includes('singa', 0)); //true
+
+
+    //8. ForEach
+    //Metode forEach mengeksekusi fungsi yang disediakan satu kali untuk setiap elemen array.
+    const abc = ['a', 'b', 'c'];
+    abc.forEach(element => console.log(element));
+    //output: "a"
+    //output: "b"
+    //output: "c"
+
+
+    //9. Join
+    //metode join membuat string item array dengan menggabungkan semua elemen array. 
+    //Mereka dipisahkan dengan koma atau pemisah lainnya (/, — , +, ).
+    const nama = ['Namaku', 'adalah', 'Valentine'];
+
+    console.log(nama.join()); //Output 'Namaku,adalah,Valentine'
+    console.log(nama.join(', '));//Output 'Namaku, adalah, Valentine'
+    console.log(nama.join(' + '));//Output 'Namaku + adalah + Valentine'
+    console.log(nama.join(''));//Output 'NamakuadalahValentine'
+
+    //10. toString
+    //metode toString mengonversi array menjadi string dan mengembalikan string sebagai hasilnya.
+    const java = ['Javascript', 'Programming', 'Languange'];
+    java.toString();
+
+    console.log(java)
+    //Output 'Javascript,Programming,Languange'
+</script>
+<body>
+    
+</body>
+</html>
