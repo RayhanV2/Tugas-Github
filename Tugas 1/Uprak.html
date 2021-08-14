@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uprak RayhanV2</title>
+    <link rel="shorcut icon" href="file:///C:/Users/ASUS/Downloads/WhatsApp%20Image%202021-08-14%20at%2008.50.03%20(1).jpeg">
+    <script>
+        var namapengirim = prompt('Selamat datang di JNET! Jika anda ingin mengirim barang, maka tolong masukkan nama anda terlebih dahulu.');
+        var namapenerima = prompt('Kemudian masukkan nama penerima.');
+        var jarakpengiriman = prompt('Masukkan jarak pengiriman (KM).');
+        var alamatpenerima = prompt('Masukkan alamat penerima.');
+        var jenisbarang = prompt('Masukkan jenis barang.')
+        var beratbarang = prompt('Masukkan berat barang (KG).');
+            
+        var hargaasli1 = jarakpengiriman * 10.000;
+        if (hargaasli1 >= 50.000) {
+            var diskonjarak = hargaasli1 * 10/100;
+        }
+        var diskonasli1 = hargaasli1 - diskonjarak;
+            
+        var hargaasli2 = beratbarang * 5.000
+        if (hargaasli2 >= 100.000) {
+            var diskonberat = hargaasli2 * 5/100;
+        }
+        var diskonasli2 = hargaasli2 - diskonberat
+
+        var biayapengiriman = hargaasli1 + hargaasli2 - diskonjarak - diskonberat;     
+
+        document.write('Nama Pengirim' + ' : ' + namapengirim + "<br/>")
+        document.write('<br/>')
+        document.write('Nama Penerima' + ' : ' + namapenerima + "<br/>")
+        document.write('</br>')
+        document.write('Jarak Pengiriman' + ' : ' + jarakpengiriman + " Km " + "<br/>")
+        document.write('<br/>')
+        document.write('Alamat Penerima' + ' : ' + alamatpenerima + "<br/>")
+        document.write('<br/>')
+        document.write('Jenis Barang' + ' : ' + jenisbarang + "<br/>")
+        document.write('<br/>')
+        document.write('Berat Barang' + ' : ' + beratbarang + " Kg " + "<br/>")
+        document.write('<br/>')
+        document.write('Biaya Pengiriman' + ' : ' + biayapengiriman + " Rp " + "<br/>")
+        document.write('<br/>')
+        document.write('Potongan jarak pengiriman' + ' : ' + diskonjarak + "Rp" + "<br/>")
+        document.write('<br/>')
+        document.write('Potongan berat barang' + ' : ' + diskonberat + "Rp" + "<br/>")
+    </script>
+</head>
+<body style="background-color: #efefef;">
+    
+    
+</body>
+</html> 
