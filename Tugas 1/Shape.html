@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung luas</title>
+    <link rel="shorcut icon" href="file:///C:/Users/ASUS/Downloads/download%20(1).png">
+    <link rel="stylesheet" href="Script.js">
+    <script>
+        //RUMUS / FUNCTION
+
+        // RUMUS LUAS PERSEGI / FUNCTION LUAS PERSEGI
+        function lp(ps) {
+            return ps * ps;
+        }
+        // RUMUS LUAS PERSEGI PANJANG / FUNCTION LUAS PERSEGI PANJANG
+        function lpp(psp, lep) {
+            return psp * lep;
+        }
+        // RUMUS LUAS SEGITIGA / FUNCTION LUAS SEGITIGA
+        function lst(ast, tst) {
+            return ast * tst / 2
+        }
+        // RUMUS LUAS LINGKARAN / FUNCTION LUAS LINGKARAN
+        function llr(jlr, phi) {
+            return phi * jlr * jlr
+        }
+        // RUMUS LUAS BELAH KETUPAT / FUNCTION LUAS BELAH KETUPAT
+        function lbk(d1k, d2k) {
+            return d1k * d2k / 2
+        }
+        // RUMUS LUAS JAJAR GENJANG / FUNCTION LUAS JAJAR GENJANG
+        function ljg(ajn, tjg) {
+            return ajn * tjg
+        }
+        // RUMUS LUAS LAYANG-LAYANG / FUNCTION LUAS LAYANG-LAYANG
+        function lll(d1l, d2l) {
+            return d1l * d2l / 2
+        }
+        var bangun_datar = prompt('Pilih bangun datar yang ingin kamu tentukan luasnya!')
+
+        switch (bangun_datar) {
+            case 'persegi' :
+                var ps = prompt('Ok, kamu memilih persegi, kemudian masukkan panjang sisinya!')
+                alert('luas persegi kamu adalah ' + lp(ps))
+                document.write('luas persegi = ' + ps + ' x ' + ps + ' = ' + lp(ps))
+                break;
+        
+            case 'persegi panjang' :
+                var psp = prompt('Ok, kamu memilih persegi panjang, kemudian masukkan panjang sisinya!')
+                var lep = prompt('Setelah itu kamu masukkan lebar sisinya!')
+                alert('luas persegi panjang kamu adalah ' + lpp(psp, lep))
+                document.write('luas persegi panjang = ' + psp + ' x ' + lep + ' = ' + lpp(psp,lep))
+                break;
+
+            case 'segitiga' :
+                var ast = prompt('Ok, kamu memilih segitiga, kemudian masukkan alasnya!')
+                var tst = prompt('Setelah itu kamu masukkan tinggi segitiganya!')
+                alert('Luas segitiga kamu adalah ' + lst(ast, tst))
+                document.write('luas segitiga = ' + ast + ' x ' + tst + '/' + '2' + ' = ' + lst(ast, tst))
+                break;
+
+            case 'lingkaran' :
+                var jlr = prompt('Ok, kamu memilih lingkaran, kemudian masukkan jari-jarinya!')
+                const phi = 3.14;
+                alert('Luas lingkaran kamu adalah ' + llr(jlr, phi))
+                document.write('luas lingkaran = ' + phi + ' x ' + jlr + ' x ' + jlr + ' = ' + llr(jlr, phi))
+                break;
+
+            case 'belah ketupat' :
+                var d1k = prompt('Ok, kamu memilih belah ketupat, kemudian masukkan diagonal 1 nya!')
+                var d2k = prompt('Setelah itu kamu masukkan diagonal ke 2nya!')
+                alert('Luas belah ketupat kamu adalah ' + lbk(d1k, d2k))
+                document.write('luas belah ketupat = ' + '1/2' + ' x ' + d1k + ' x ' + d2k + ' = ' + lbk(d1k, d2k))
+                break;
+
+            case 'jajar genjang' :
+                var ajn = prompt('Ok, kamu memilih jajar genjang, kemudian masukkan alasnya!')
+                var tjg = prompt('Setelah itu kamu masukkan tinggi jajar genjangnya!')
+                alert('Luas jajar genjang kamu adalah ' + ljg(ajn, tjg))
+                document.write('luas jajar genjang = ' + ajn + ' x ' + tjg + ' = '+ ljg(ajn, tjg))
+                break;
+            
+            case 'layang layang' :
+                var d1l = prompt('Ok, kamu memilih layang-layang, kemudian masukkan diagonal 1 nya!')
+                var d2l = prompt('Setelah itu kamu masukkan diagonal ke 2nya!')
+                alert('Luas layang-layang kamu adalah ' + lll(d1l, d2l))
+                document.write('luas layang-layang = ' + '1/2' + ' x ' + d1l + ' x ' + d2l + ' = ' + lll(d1l, d2l))
+                break;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
