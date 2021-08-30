@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-
+    <link rel="shorcut icon" href="file:///C:/Users/ASUS/Downloads/WhatsApp%20Image%202021-08-29%20at%2017.23.50.jpeg">
     <title>Figure JPN</title>
     <style>
         .jumbotron{
@@ -54,16 +54,16 @@
                           <td>Payment Total</td>
                           <td>IDR <span id="totalbayar"></span></td>
                       </tr>
-                  </tbody>
+                  </tbody>  
               </table>
 
-              <button type="button" class="btn btn-primary mt-3 btn-block">Pay</button>
+              <a href="FigurePayment.html"><button type="button" class="btn btn-primary mt-3 btn-block">Pay Now!</button></a>
 
             
             </div>
             
             <div class="col-8" id="listproduk">
-
+              
                 
             </div>
           </div>
@@ -97,7 +97,7 @@
                     '<div class="card-body">'+
                       '<h5 class="card-title">'+namabarang[i]+'</h5>'+
                       '<p class="card-text">IDR '+hargabarang[i]+'</p>'+
-                      '<a href="#" class="btn btn-primary" onclick="addlistitem('+i+')">Add to Cart</a>'+
+                      '<a href="#" class="btn btn-warning" onclick="addlistitem('+i+')">Add to Cart</a>'+
                     '</div>'+
                   '</div>'
                     
@@ -141,26 +141,36 @@
                         '</div>'+
                       '</div>'
 
-                      hargatotal = hargabarang_keranjang[i]+hargatotal
+                      hargatotal = hargabarang_keranjang[i] + hargatotal
 
-                      
-
-                      if (totalbayar>600000) {
-                          discount = totalbayar*0.5
-                      }else{
-                          discount = 0
-                      }
-                      totalbayar = hargatotal-discount-pajak
-
-                      pajak = totalbayar*0.1
-                      var totalbelanja = totalbayar - pajak
-                      tampilanpajak.innerHTML = pajak
-                      tampilandiscount = discount
-                      tampilantotalbayar.innerHTML = totalbelanja
-
-                    
+                if (totalbayar > 50000) {
+                    discount = totalbayar * 0.05
+                } else {
+                    discount = 0
                 }
+
+                totalbayar = hargatotal - discount
+                
+                pajak = totalbayar * 0.1
+                var totalbelanja = totalbayar + pajak
+
+                tampilanpajak.innerHTML = pajak
+                tampilandiscount.innerHTML = discount
+                tampilantotalbayar.innerHTML = totalbelanja
+
             }
+        }
+
+          
+            function handlesubmit(i) {
+              localStorage.setItem("GAMBARBARANG", gambarbarang_keranjang[i])
+              localStorage.setItem("NAMABARANG", namabarang_keranjang[i])
+              localStorage.setItem("HARGABARANG",totalbelanja)
+            }
+        
+                    
+                
+            
             
             function deleteitem(id) {
                 gambarbarang_keranjang.splice(id,1)
