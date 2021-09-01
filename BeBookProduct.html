@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.87.0">
+    <title>BeBook</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="shorcut icon" href="file:///C:/Users/ASUS/Downloads/WhatsApp%20Image%202021-08-30%20at%2008.18.39.jpeg">
+
+
+    
+
+    <!-- Bootstrap core CSS -->
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .col{
+        width: 10.1rem;
+      }
+
+      .listtitle{
+            height:50px;
+        }
+      
+      .card
+        
+      
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    
+  <body style="background-color:#efefef;">
+<main>
+  <div class="container">
+    <header class="d-flex justify-content-center py-3">
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="BeBookHome.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Books</a></li> 
+        <li class="nav-item"><a href="BeBookCheckOut.html" class="nav-link">About</a></li>
+      </ul>
+    </header>
+  </div>
+</main>
+<main>
+
+  
+
+  <div class="album py-5">
+    <div class="container">
+      
+      
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col-4">
+          
+          
+
+        
+            
+        </div>
+      </div>
+         <br>
+      <div class="listtitle bg-dark rounded text-center text-white pt-2">Novel List</div>
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="listbuku">
+        
+      </div>
+      <br>
+      
+      <div class="listtitle bg-dark rounded text-center text-white pt-2">Borrow Lists</div>
+      <div class="container">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="listkeranjangbuku">
+            
+          </div>
+        </div>
+
+          <div class="bg-dark rounded text-center text-white pt-2"></div>
+
+      
+        <br>
+        
+        <div class="container bg-light">
+          <main>
+            <div class="py-5 text-center">
+              <img class="d-block mx-auto mb-4" src="file:///C:/Users/ASUS/Downloads/WhatsApp%20Image%202021-08-30%20at%2008.18.39.jpeg" alt="" width="72" height="57">
+              <h2>Book borrowing requirements</h2>
+              <p class="lead">To prevent unwanted things, it is highly recommended to fill out the list below</p>
+              <p>Rent maximal 3 books/day<span style="color: red !important; display: inline; float: none;">*</span></p>
+            </div>
+        
+            
+  
+                <h4 class="mb-3">Borrower ID</h4>
+                <form class="needs-validation" novalidate>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <label for="namadepan" class="form-label">First name</label>
+                      <input type="text" class="form-control" id="txt_namadepan" placeholder="Enter your name here.">
+                    </div>
+        
+                    <div class="col-sm-6">
+                      <label for="namaterakhir" class="form-label">Last name</label>
+                      <input type="text" class="form-control" id="txt_namaterakhir" placeholder="Enter your name here."> 
+                    </div>
+        
+                    <div class="col-12">
+                      <label for="nomortelepon" class="form-label">Phone Number</label>
+                      <input type="text" class="form-control" id="txt_nomortelepon" placeholder="Enter your phone numbers here.">
+                    </div>
+        
+                    <div class="col-12">
+                      <label for="berapalama" class="form-label">How long you will borrow?</label>
+                      <select class="form-select" id="txt_berapalama">
+                          <option value="">Choose...</option>
+                          <option value="1 Days">1 Days</option>
+                          <option value="2 Days">2 Days</option>
+                          <option value="3 Days">3 Days</option>
+                          <option value="4 Days">4 Days</option>
+                          <option value="5 Days">5 Days</option>
+                          <option value="6 Days">6 Days</option>
+                          <option value="7 Days">7 Days</option>
+                        </select>
+                    </div>
+  
+                    <div class="col-md-4">
+                      <label for="date" class="form-label">Book borrowing date</label>
+                      <div class="form-control">
+                          <input type="date" name="date" id="txt_date">
+                    </div>
+        
+                    <div class="col-md-5">
+                      <label for="buku" class="form-label">Books</label>
+                      <select class="form-select" id="txt_buku">
+                        <option value="">Choose...</option>
+                        <option value="Tensura" >Tensei Shitara Slime Datta Ken</option>
+                        <option value="Re:Zero">Re:Zero Hajimeru Isekai Seikatsu</option>
+                        <option value="SAO">Sword Art Online</option>
+                        <option value="NGNL">No Game No Life</option>
+                        <option value="Noragami">Noragami</option>
+                        <option value="FireForce">Fire Force</option>
+                      </select>
+                    </div>
+
+                    <div class="col-md-5">
+                      <label for="buku" class="form-label">Books 2</label>
+                      <select class="form-select" id="txt_buku2">
+                        <option value="">Choose...</option>
+                        <option value="Tensura" >Tensei Shitara Slime Datta Ken</option>
+                        <option value="Re:Zero">Re:Zero Hajimeru Isekai Seikatsu</option>
+                        <option value="SAO">Sword Art Online</option>
+                        <option value="NGNL">No Game No Life</option>
+                        <option value="Noragami">Noragami</option>
+                        <option value="FireForce">Fire Force</option>
+                      </select>
+                    </div>
+
+                    <div class="col-md-5">
+                      <label for="buku" class="form-label">Books 3</label>
+                      <select class="form-select" id="txt_buku3">
+                        <option value="">Choose...</option>
+                        <option value="Tensura" >Tensei Shitara Slime Datta Ken</option>
+                        <option value="Re:Zero">Re:Zero Hajimeru Isekai Seikatsu</option>
+                        <option value="SAO">Sword Art Online</option>
+                        <option value="NGNL">No Game No Life</option>
+                        <option value="Noragami">Noragami</option>
+                        <option value="FireForce">Fire Force</option>
+                      </select>
+                    </div>
+                    
+                    <submit class="btn btn-primary mt-4"onclick="add()">Save</submit>
+                    
+                  </div>
+                      
+  
+                      <table class="table">
+                          <thead>
+                            <tr>
+                              <th scope="col">First Name</th>
+                              <th scope="col">Last Name</th>
+                              <th scope="col">Phone Numbers</th>
+                              <th scope="col">Rent Time</th>
+                              <th scope="col">Book 1</th>
+                              <th scope="col">Book 2</th>
+                              <th scope="col">Book 3</th>
+                              <th scope="col">Books Rent Date</th>
+                              <th scope="col">Delete</th>
+                            </tr>
+                          </thead>
+                          <tbody id="tampildata">
+                            
+              
+                          </tbody>
+                        </table>  
+                        <a href="BeBookCheckOut.html"><button type="button" class="btn btn-warning mt-3 btn-block">Proceed</button></a>
+                </form>
+              </div>
+            </div>
+  
+            
+          </main>
+      </div>
+    </div>
+  </div>
+  
+
+  
+
+</main>
+
+<footer class="text-muted py-5">
+  <div class="container">
+    <p class="float-end mb-1">
+      <a href="#">Back to top</a>
+    </p>
+    <p class="mb-1">This BeBook app is my work, it took 2 days to make it. So, sorry if it's not perfect.</p>
+    <p class="mb-0"> &copy Bootstrap &copy RayhanV2 <a href="/"></p>
+  </div>
+</footer>
+
+
+
+    <script>
+      var namabuku = ['Tensura Volume 1','Tensura Volume 2','Tensura Volume 3','Tensura Volume 4','Tensura Volume 5',
+                      'Tensura Volume 6','Tensura Volume 7','Tensura Volume 8','Tensura Volume 9','Tensura Volume 10',
+                      'Tensura Volume 11','Tensura Volume 12','Tensura Volume 13','Tensura Volume 14','Tensura Volume 15',
+                      'Tensura Volume 16','Tensura Volume 17','Tensura Volume 18','Re:Zero Volume 1','Re:Zero Volume 2','Re:Zero Volume 3',
+                      'Re:Zero Volume 4','Re:Zero Volume 5','Re:Zero Volume 6','Re:Zero Volume 7','Re:Zero Volume 8','Re:Zero Volume 9',
+                      'Re:Zero Volume 10','Re:Zero Volume 11','Re:Zero Volume 12','Re:Zero Volume 13','Re:Zero Volume 14','Re:Zero Volume 15',
+                      'Re:Zero Volume 16','Re:Zero Volume 17','Re:Zero Volume 18','Re:Zero Volume 19','Re:Zero Volume 20','Re:Zero Volume 21',
+                      'Re:Zero Volume 22','Re:Zero Volume 23','Re:Zero Volume 24','Re:Zero Volume 25','Re:Zero Volume 26','Re:Zero Volume 27','SAO Volume 1','SAO Volume 2',
+                      'SAO Volume 3','SAO Volume 4','SAO Volume 5','SAO Volume 6','SAO Volume 7','SAO Volume 8','SAO Volume 9','SAO Volume 10','SAO Volume 11','SAO Volume 12',
+                      'SAO Volume 13','SAO Volume 14','SAO Volume 15','SAO Volume 16','SAO Volume 17','SAO Volume 18','SAO Volume 19','SAO Volume 20','SAO Volume 21','SAO Volume 22',
+                      'SAO Volume 23','SAO Volume 24','SAO Volume 25','NGNL Volume 1','NGNL Volume 2','NGNL Volume 3','NGNL Volume 4','NGNL Volume 5','NGNL Volume 6','NGNL Volume 7',
+                      'NGNL Volume 8','NGNL Volume 9','NGNL Volume 10','Noragami Volume 1','Noragami Volume 2','Noragami Volume 3','Noragami Volume 4','Noragami Volume 5','Noragami Volume 6',
+                      'Noragami Volume 7','Noragami Volume 8','Noragami Volume 9','Noragami Volume 10','Noragami Volume 11','Noragami Volume 12','Noragami Volume 13','Noragami Volume 14','Noragami Volume 15',
+                      'Noragami Volume 16','Noragami Volume 17','Noragami Volume 18','Noragami Volume 19','Noragami Volume 20','Noragami Volume 21','Noragami Volume 22','Fire Force Volume 1','Fire Force Volume 2',
+                      'Fire Force Volume 3','Fire Force Volume 4','Fire Force Volume 5','Fire Force Volume 6','Fire Force Volume 7','Fire Force Volume 8','Fire Force Volume 9','Fire Force Volume 10',
+                      'Fire Force Volume 11','Fire Force Volume 12','Fire Force Volume 13','Fire Force Volume 14','Fire Force Volume 15','Fire Force Volume 16','Fire Force Volume 17','Fire Force Volume 18',
+                      'Fire Force Volume 19','Fire Force Volume 20','Fire Force Volume 21','Fire Force Volume 22','Fire Force Volume 23','Fire Force Volume 24',];
+      var gambarbuku = ['https://static.wikia.nocookie.net/tensei-shitara-slime-datta-ken/images/6/68/LN_Vol_1_JP.jpg/revision/latest/scale-to-width-down/700?cb=20181012112315',
+                        'https://static.wikia.nocookie.net/tensei-shitara-slime-datta-ken/images/2/27/LN_Vol_2_JP.jpg/revision/latest/scale-to-width-down/700?cb=20181012112316',
+                        'https://static.wikia.nocookie.net/tensei-shitara-slime-datta-ken/images/0/0d/LN_Vol_3_JP.jpg/revision/latest/scale-to-width-down/700?cb=20181012112318',
+                        'https://static.wikia.nocookie.net/tensei-shitara-slime-datta-ken/images/d/d3/LN_Vol_4_JP.jpg/revision/latest/scale-to-width-down/700?cb=20181012112319',
+                        'https://static.wikia.nocookie.net/tensei-shitara-slime-datta-ken/images/1/1d/LN_Vol_5_JP.jpg/revision/latest/scale-to-width-down/700?cb=20181012112320',
+                        'https://static.wikia.nocookie.net/tensei-shitara-slime-datta-ken/images/5/52/LN_Vol_6_JP.jpg/revision/latest/scale-to-width-down/700?cb=20181012112322',
+                        'https://static.wikia.nocookie.net/tensei-shitara-slime-datta-ken/images/b/b6/LN_Vol_7_JP.jpg/revision/latest/scale-to-width-down/700?cb=20181012112323',
+                        'https://static.wikia.nocookie.net/tensei-shitara-slime-datta-ken/images/4/47/LN_Vol_8_JP.jpg/revision/latest/scale-to-width-down/700?cb=20181012112325',
+                        'https://static.wikia.nocookie.net/tensei-shitara-slime-datta-ken/images/5/58/LN_Vol_9_JP.jpg/revision/latest/scale-to-width-down/700?cb=20181012112327',
+                        'https://static.wikia.nocookie.net/tensei-shitara-slime-datta-ken/images/8/81/LN_Vol_10_JP.jpg/revision/latest/scale-to-width-down/700?cb=20181012112328',
+                        'https://static.wikia.nocookie.net/tensei-shitara-slime-datta-ken/images/c/c4/LN_Vol_11_JP.jpg/revision/latest/scale-to-width-down/700?cb=20181012112329',
+                        'https://static.wikia.nocookie.net/tensei-shitara-slime-datta-ken/images/8/8b/LN_Vol_12_JP.jpg/revision/latest/scale-to-width-down/700?cb=20181012112330',
+                        'https://static.wikia.nocookie.net/tensei-shitara-slime-datta-ken/images/4/41/LN_Vol_13_JP.jpg/revision/latest/scale-to-width-down/700?cb=20181012112331',
+                        'https://static.wikia.nocookie.net/tensei-shitara-slime-datta-ken/images/a/a5/LN_Vol_14_JP.jpg/revision/latest/scale-to-width-down/700?cb=20210612163526',
+                        'https://static.wikia.nocookie.net/tensei-shitara-slime-datta-ken/images/6/66/LN_Vol_15_JP.jpg/revision/latest/scale-to-width-down/700?cb=20210612163801',
+                        'https://static.wikia.nocookie.net/tensei-shitara-slime-datta-ken/images/2/2a/LN_Vol_16_JP.jpg/revision/latest/scale-to-width-down/700?cb=20210612163957',
+                        'https://static.wikia.nocookie.net/tensei-shitara-slime-datta-ken/images/4/4e/LN_Vol_17_JP.jpg/revision/latest/scale-to-width-down/700?cb=20210612164547',
+                        'https://static.wikia.nocookie.net/tensei-shitara-slime-datta-ken/images/d/d0/LN_Vol_18_JP.jpg/revision/latest/scale-to-width-down/700?cb=20210612164835',
+                        'https://static.wikia.nocookie.net/rezero/images/d/db/Volume_1_Cover.jpeg/revision/latest/scale-to-width-down/700?cb=20180407203123',
+                        'https://static.wikia.nocookie.net/rezero/images/2/21/Volume_2_Cover.jpeg/revision/latest/scale-to-width-down/700?cb=20170522005827',
+                        'https://static.wikia.nocookie.net/rezero/images/7/75/Volume_3_Cover.jpeg/revision/latest/scale-to-width-down/700?cb=20180407204622',
+                        'https://static.wikia.nocookie.net/rezero/images/e/ee/Volume_4_Cover.jpeg/revision/latest/scale-to-width-down/700?cb=20180407205114',
+                        'https://static.wikia.nocookie.net/rezero/images/d/d0/Volume_5_Cover.jpeg/revision/latest/scale-to-width-down/700?cb=20180407205722',
+                        'https://static.wikia.nocookie.net/rezero/images/7/71/Volume_6_Cover.jpeg/revision/latest/scale-to-width-down/699?cb=20180407210246',
+                        'https://static.wikia.nocookie.net/rezero/images/f/fe/Volume_7_Cover.jpg/revision/latest/scale-to-width-down/699?cb=20180407211230',
+                        'https://static.wikia.nocookie.net/rezero/images/3/33/Volume_8_Cover.jpg/revision/latest/scale-to-width-down/700?cb=20210805185057',
+                        'https://static.wikia.nocookie.net/rezero/images/1/11/Volume_9_cover.jpg/revision/latest/scale-to-width-down/700?cb=20210805185244',
+                        'https://static.wikia.nocookie.net/rezero/images/3/32/Volume_10_Cover.png/revision/latest/scale-to-width-down/700?cb=20210805185622',
+                        'https://static.wikia.nocookie.net/rezero/images/6/6d/Volume_11_Cover.jpg/revision/latest/scale-to-width-down/700?cb=20210805185750',
+                        'https://static.wikia.nocookie.net/rezero/images/2/27/Volume_12_Cover.jpg/revision/latest/scale-to-width-down/700?cb=20210805190028',
+                        'https://static.wikia.nocookie.net/rezero/images/1/13/Volume_13_Cover.jpg/revision/latest/scale-to-width-down/700?cb=20210805190210',
+                        'https://static.wikia.nocookie.net/rezero/images/1/10/Volume_14_Cover.jpg/revision/latest/scale-to-width-down/700?cb=20180407225853',
+                        'https://static.wikia.nocookie.net/rezero/images/2/27/Volume_15_Cover.jpg/revision/latest/scale-to-width-down/150?cb=20210805190530',
+                        'https://static.wikia.nocookie.net/rezero/images/2/2c/Volume_16_Cover.jpg/revision/latest/scale-to-width-down/700?cb=20210805190719',
+                        'https://static.wikia.nocookie.net/rezero/images/a/af/Volume_17_Cover.jpg/revision/latest/scale-to-width-down/700?cb=20210805190847',
+                        'https://static.wikia.nocookie.net/rezero/images/3/35/Volume_18_Cover.jpg/revision/latest/scale-to-width-down/700?cb=20181229020051',
+                        'https://static.wikia.nocookie.net/rezero/images/f/f8/Volume_19_Cover.jpg/revision/latest/scale-to-width-down/700?cb=20210805191042',
+                        'https://static.wikia.nocookie.net/rezero/images/c/ca/Volume_20_Cover.jpg/revision/latest/scale-to-width-down/700?cb=20210808170502',
+                        'https://static.wikia.nocookie.net/rezero/images/7/79/Volume_21_Cover.png/revision/latest/scale-to-width-down/700?cb=20210805191844',
+                        'https://static.wikia.nocookie.net/rezero/images/4/4d/Volume_22_Cover.jpg/revision/latest/scale-to-width-down/700?cb=20210805192019',
+                        'https://static.wikia.nocookie.net/rezero/images/c/cd/Volume_23_Cover.jpg/revision/latest/scale-to-width-down/700?cb=20210805192236',
+                        'https://static.wikia.nocookie.net/rezero/images/9/9d/Volume_24_Cover.jpg/revision/latest/scale-to-width-down/700?cb=20210808171552',
+                        'https://static.wikia.nocookie.net/rezero/images/9/96/Re_Zero_Volume_25_Cover.jpg/revision/latest/scale-to-width-down/700?cb=20210805193006',
+                        'https://static.wikia.nocookie.net/rezero/images/1/16/ReZero_volume_26_cover.jpg/revision/latest/scale-to-width-down/700?cb=20210805193332',
+                        'https://static.wikia.nocookie.net/rezero/images/2/2b/Re_Zero_Volume_27_Cover.jpg/revision/latest/scale-to-width-down/700?cb=20210805193511',
+                        'https://static.wikia.nocookie.net/swordartonline/images/5/52/Sword_Art_Online_Volume_01.png/revision/latest/scale-to-width-down/700?cb=20210731001108',
+                        'https://static.wikia.nocookie.net/swordartonline/images/e/e9/Sword_Art_Online_Volume_02.png/revision/latest/scale-to-width-down/700?cb=20210731001206',
+                        'https://static.wikia.nocookie.net/swordartonline/images/2/27/Sword_Art_Online_Volume_03.png/revision/latest/scale-to-width-down/700?cb=20210731001246',
+                        'https://static.wikia.nocookie.net/swordartonline/images/b/b3/Sword_Art_Online_Volume_04.png/revision/latest/scale-to-width-down/700?cb=20210731001327',
+                        'https://static.wikia.nocookie.net/swordartonline/images/f/f3/Sword_Art_Online_Volume_05.png/revision/latest/scale-to-width-down/700?cb=20210731001405',
+                        'https://static.wikia.nocookie.net/swordartonline/images/a/a4/Sword_Art_Online_Volume_06.png/revision/latest/scale-to-width-down/700?cb=20210731001449',
+                        'https://static.wikia.nocookie.net/swordartonline/images/4/47/Sword_Art_Online_Volume_07.png/revision/latest/scale-to-width-down/700?cb=20210731001528',
+                        'https://static.wikia.nocookie.net/swordartonline/images/0/04/Sword_Art_Online_Volume_08.png/revision/latest/scale-to-width-down/700?cb=20210731001612',
+                        'https://static.wikia.nocookie.net/swordartonline/images/7/71/Sword_Art_Online_Volume_09.png/revision/latest/scale-to-width-down/700?cb=20210731001652',
+                        'https://static.wikia.nocookie.net/swordartonline/images/3/34/Sword_Art_Online_Volume_10.png/revision/latest/scale-to-width-down/700?cb=20210731001740',
+                        'https://static.wikia.nocookie.net/swordartonline/images/c/c7/Sword_Art_Online_Volume_11.png/revision/latest/scale-to-width-down/700?cb=20210731002811',
+                        'https://static.wikia.nocookie.net/swordartonline/images/b/b3/Sword_Art_Online_Volume_12.png/revision/latest/scale-to-width-down/700?cb=20210731002850',
+                        'https://static.wikia.nocookie.net/swordartonline/images/9/98/Sword_Art_Online_Volume_13.png/revision/latest/scale-to-width-down/700?cb=20210731002927',
+                        'https://static.wikia.nocookie.net/swordartonline/images/2/2d/Sword_Art_Online_Volume_14.png/revision/latest/scale-to-width-down/700?cb=20210731003003',
+                        'https://static.wikia.nocookie.net/swordartonline/images/0/00/Sword_Art_Online_Volume_15.png/revision/latest/scale-to-width-down/700?cb=20210731003042',
+                        'https://static.wikia.nocookie.net/swordartonline/images/6/68/Sword_Art_Online_Volume_16.png/revision/latest/scale-to-width-down/700?cb=20210731003125',
+                        'https://static.wikia.nocookie.net/swordartonline/images/f/f7/Sword_Art_Online_Volume_17.png/revision/latest/scale-to-width-down/700?cb=20210731003207',
+                        'https://static.wikia.nocookie.net/swordartonline/images/9/90/Sword_Art_Online_Volume_18.png/revision/latest/scale-to-width-down/700?cb=20210731003245',
+                        'https://static.wikia.nocookie.net/swordartonline/images/b/b7/Sword_Art_Online_Volume_19.png/revision/latest/scale-to-width-down/700?cb=20210731003408',
+                        'https://static.wikia.nocookie.net/swordartonline/images/0/07/Sword_Art_Online_Volume_20.png/revision/latest/scale-to-width-down/700?cb=20210731003454',
+                        'https://static.wikia.nocookie.net/swordartonline/images/e/e9/Sword_Art_Online_Volume_21.png/revision/latest/scale-to-width-down/700?cb=20181206154357',
+                        'https://static.wikia.nocookie.net/swordartonline/images/a/a9/Sword_Art_Online_Volume_22.png/revision/latest/scale-to-width-down/700?cb=20191009162926',
+                        'https://static.wikia.nocookie.net/swordartonline/images/5/57/Sword_Art_Online_Volume_23.png/revision/latest/scale-to-width-down/700?cb=20210731005050',
+                        'https://static.wikia.nocookie.net/swordartonline/images/7/79/Sword_Art_Online_Volume_24.png/revision/latest/scale-to-width-down/700?cb=20200508221614',
+                        'https://static.wikia.nocookie.net/swordartonline/images/d/d8/Sword_Art_Online_Volume_25.png/revision/latest/scale-to-width-down/700?cb=20201209160051',
+                        'https://static.wikia.nocookie.net/no-game-no-life/images/4/46/Light_Novel_Volume_1_Cover.jpeg/revision/latest/scale-to-width-down/700?cb=20171107093418',
+                        'https://static.wikia.nocookie.net/no-game-no-life/images/9/90/Light_Novel_Volume_2_Cover.jpeg/revision/latest/scale-to-width-down/700?cb=20171107093407',
+                        'https://static.wikia.nocookie.net/no-game-no-life/images/f/f4/Light_Novel_Volume_3_Cover.jpeg/revision/latest/scale-to-width-down/700?cb=20171107093350',
+                        'https://static.wikia.nocookie.net/no-game-no-life/images/b/b9/Light_Novel_Volume_4_Cover.jpeg/revision/latest/scale-to-width-down/700?cb=20171107093335',
+                        'https://static.wikia.nocookie.net/no-game-no-life/images/f/f2/Light_Novel_Volume_5_Cover.jpeg/revision/latest/scale-to-width-down/700?cb=20171107093321',
+                        'https://static.wikia.nocookie.net/no-game-no-life/images/b/bf/Light_Novel_Volume_6_Cover.jpeg/revision/latest/scale-to-width-down/700?cb=20171107093309',
+                        'https://static.wikia.nocookie.net/no-game-no-life/images/6/6a/Light_Novel_Volume_7_Cover.jpeg/revision/latest/scale-to-width-down/699?cb=20171107093258',
+                        'https://static.wikia.nocookie.net/no-game-no-life/images/b/b2/Light_Novel_Volume_8_Cover.jpeg/revision/latest/scale-to-width-down/700?cb=20171107093242',
+                        'https://static.wikia.nocookie.net/no-game-no-life/images/c/c4/Light_Novel_Volume_9_Cover.jpeg/revision/latest/scale-to-width-down/700?cb=20171107093230',
+                        'https://static.wikia.nocookie.net/no-game-no-life/images/a/a7/Light_Novel_Volume_10_Cover.jpeg/revision/latest/scale-to-width-down/700?cb=20180325132435',
+                        'https://static.wikia.nocookie.net/noragami/images/0/0f/Volume_01.png/revision/latest/scale-to-width-down/700?cb=20140311095550',
+                        'https://static.wikia.nocookie.net/noragami/images/6/68/Volume_02.png/revision/latest/scale-to-width-down/700?cb=20140311095855',
+                        'https://static.wikia.nocookie.net/noragami/images/5/5c/Volume_03.png/revision/latest/scale-to-width-down/700?cb=20140311100139',
+                        'https://static.wikia.nocookie.net/noragami/images/e/ef/Volume_04.png/revision/latest/scale-to-width-down/700?cb=20140311100221',
+                        'https://static.wikia.nocookie.net/noragami/images/c/cf/Volume_05.png/revision/latest/scale-to-width-down/700?cb=20140311100518',
+                        'https://static.wikia.nocookie.net/noragami/images/2/2e/Volume_06.png/revision/latest/scale-to-width-down/700?cb=20140311100544',
+                        'https://static.wikia.nocookie.net/noragami/images/3/36/Volume_07.png/revision/latest/scale-to-width-down/663?cb=20210202142951',
+                        'https://static.wikia.nocookie.net/noragami/images/1/14/Volume_08.png/revision/latest/scale-to-width-down/662?cb=20170602044707',
+                        'https://static.wikia.nocookie.net/noragami/images/f/f3/Volume_09.png/revision/latest/scale-to-width-down/663?cb=20210202143108',
+                        'https://static.wikia.nocookie.net/noragami/images/6/6b/Volume_10.png/revision/latest/scale-to-width-down/663?cb=20210202143201',
+                        'https://static.wikia.nocookie.net/noragami/images/1/1b/Volume_11.png/revision/latest/scale-to-width-down/662?cb=20210202143313',
+                        'https://static.wikia.nocookie.net/noragami/images/4/4e/Volume_12.png/revision/latest/scale-to-width-down/658?cb=20210202143431',
+                        'https://static.wikia.nocookie.net/noragami/images/b/b6/Volume_13.png/revision/latest/scale-to-width-down/664?cb=20210202143704',
+                        'https://static.wikia.nocookie.net/noragami/images/1/17/Volume_14.png/revision/latest/scale-to-width-down/668?cb=20151106052203',
+                        'https://static.wikia.nocookie.net/noragami/images/4/4e/Volume_15.png/revision/latest/scale-to-width-down/655?cb=20210202143748',
+                        'https://static.wikia.nocookie.net/noragami/images/4/45/Volume_16.png/revision/latest/scale-to-width-down/662?cb=20210202143903',
+                        'https://static.wikia.nocookie.net/noragami/images/6/64/Volume_17.png/revision/latest/scale-to-width-down/669?cb=20160717174610',
+                        'https://static.wikia.nocookie.net/noragami/images/a/a2/Volume_18.png/revision/latest/scale-to-width-down/664?cb=20210202143947',
+                        'https://static.wikia.nocookie.net/noragami/images/c/c9/Volume_19.png/revision/latest/scale-to-width-down/664?cb=20210202144118',
+                        'https://static.wikia.nocookie.net/noragami/images/3/32/Volume_20.png/revision/latest/scale-to-width-down/663?cb=20210202153313',
+                        'https://static.wikia.nocookie.net/noragami/images/a/a6/Volume_21.png/revision/latest/scale-to-width-down/660?cb=20210202153455',
+                        'https://static.wikia.nocookie.net/noragami/images/5/5e/Volume_22.png/revision/latest/scale-to-width-down/667?cb=20210202154354',
+                        'https://static.wikia.nocookie.net/fire-brigade-of-flames/images/f/f1/FIRE_FORCE_1.png/revision/latest/scale-to-width-down/667?cb=20160915132758',
+                        'https://static.wikia.nocookie.net/fire-brigade-of-flames/images/c/c1/FIRE_FORCE_2.png/revision/latest/scale-to-width-down/466?cb=20161102044849',
+                        'https://static.wikia.nocookie.net/fire-brigade-of-flames/images/c/ca/FIRE_FORCE_3.png/revision/latest/scale-to-width-down/300?cb=20170212174640',
+                        'https://static.wikia.nocookie.net/fire-brigade-of-flames/images/0/06/FIRE_FORCE_4.png/revision/latest/scale-to-width-down/300?cb=20170212174337',
+                        'https://static.wikia.nocookie.net/fire-brigade-of-flames/images/b/b8/FIRE_FORCE_5.png/revision/latest/scale-to-width-down/462?cb=20170830193311',
+                        'https://static.wikia.nocookie.net/fire-brigade-of-flames/images/8/83/FIRE_FORCE_6.png/revision/latest/scale-to-width-down/467?cb=20170830193332',
+                        'https://static.wikia.nocookie.net/fire-brigade-of-flames/images/3/3c/FIRE_FORCE_7.png/revision/latest/scale-to-width-down/642?cb=20181203105008',
+                        'https://static.wikia.nocookie.net/fire-brigade-of-flames/images/d/dd/FIRE_FORCE_8.png/revision/latest/scale-to-width-down/717?cb=20181203105042',
+                        'https://static.wikia.nocookie.net/fire-brigade-of-flames/images/9/94/FIRE_FORCE_9.png/revision/latest/scale-to-width-down/716?cb=20181225131459',
+                        'https://static.wikia.nocookie.net/fire-brigade-of-flames/images/4/49/FIRE_FORCE_10.png/revision/latest/scale-to-width-down/717?cb=20181225131617',
+                        'https://static.wikia.nocookie.net/fire-brigade-of-flames/images/2/2f/FIRE_FORCE_11.png/revision/latest/scale-to-width-down/718?cb=20181225131659',
+                        'https://static.wikia.nocookie.net/fire-brigade-of-flames/images/4/4f/FIRE_FORCE_12.png/revision/latest/scale-to-width-down/713?cb=20181225131751',
+                        'https://static.wikia.nocookie.net/fire-brigade-of-flames/images/d/de/FIRE_FORCE_13.png/revision/latest/scale-to-width-down/716?cb=20181225132255',
+                        'https://static.wikia.nocookie.net/fire-brigade-of-flames/images/f/f6/FIRE_FORCE_14.png/revision/latest/scale-to-width-down/463?cb=20181225205056',
+                        'https://static.wikia.nocookie.net/fire-brigade-of-flames/images/1/13/FIRE_FORCE_15.png/revision/latest/scale-to-width-down/464?cb=20190812032225',
+                        'https://static.wikia.nocookie.net/fire-brigade-of-flames/images/4/4d/FIRE_FORCE_16.png/revision/latest/scale-to-width-down/468?cb=20190812032255',
+                        'https://static.wikia.nocookie.net/fire-brigade-of-flames/images/f/f8/FIRE_FORCE_17.png/revision/latest/scale-to-width-down/1000?cb=20200731123313',
+                        'https://static.wikia.nocookie.net/fire-brigade-of-flames/images/e/e0/FIRE_FORCE_18.png/revision/latest/scale-to-width-down/1000?cb=20200731123556',
+                        'https://static.wikia.nocookie.net/fire-brigade-of-flames/images/1/10/FIRE_FORCE_19.png/revision/latest/scale-to-width-down/1000?cb=20200731123753',
+                        'https://static.wikia.nocookie.net/fire-brigade-of-flames/images/f/f5/FIRE_FORCE_20.png/revision/latest/scale-to-width-down/1000?cb=20210427132346',
+                        'https://static.wikia.nocookie.net/fire-brigade-of-flames/images/d/d0/FIRE_FORCE_21.png/revision/latest/scale-to-width-down/666?cb=20210427132924',
+                        'https://static.wikia.nocookie.net/fire-brigade-of-flames/images/7/79/FIRE_FORCE_22.png/revision/latest/scale-to-width-down/1000?cb=20210427133938',
+                        'https://static.wikia.nocookie.net/fire-brigade-of-flames/images/6/64/FIRE_FORCE_23.png/revision/latest/scale-to-width-down/298?cb=20210803042347',
+                        'https://static.wikia.nocookie.net/fire-brigade-of-flames/images/7/79/FIRE_FORCE_24.png/revision/latest/scale-to-width-down/297?cb=20210803042227,'];
+      var listbuku = document.getElementById('listbuku')
+      var listkeranjangbuku = document.getElementById('listkeranjangbuku')
+      var gambarbuku_keranjang = [];
+      var namabuku_keranjang = [];
+
+      
+
+      function showlistbuku() {
+        listbuku.innerHTML =''
+        for (let i = 0; i < namabuku.length; i++) {
+          listbuku.innerHTML += '<div class="col">'+
+          '<div class="card shadow-sm">'+
+            '<img src="'+gambarbuku[i]+'" alt="">'+
+
+            '<div class="card-body">'+
+              '<h5 class="card-text">'+namabuku[i]+'</h5>'+
+              
+              '<div class="d-flex justify-content-between align-items-center">'+
+                '<div class="btn-group">'+
+                  '<button type="button" class="btn btn-sm btn-primary" onclick="addlistitem('+i+')">Rent</button>'+
+                  
+                '</div>'+
+              '</div>'+
+            '</div>'+
+          '</div>'+
+        '</div>'
+          
+        }
+      }
+
+      showlistbuku()
+
+      function addlistitem(id) {
+          gambarbuku_keranjang.push(gambarbuku[id])
+          namabuku_keranjang.push(namabuku[id])
+
+          showlistkeranjangbuku()
+
+          console.log(namabuku_keranjang)
+      }
+
+      var listkeranjangbuku = document.getElementById('listkeranjangbuku')
+
+      function showlistkeranjangbuku() {
+          listkeranjangbuku.innerHTML=''
+          for (let i = 0; i < namabuku_keranjang.length; i++) {
+                    listkeranjangbuku.innerHTML += '<div class="col">'+
+                    '<div class="card shadow-sm md-3" style="width: 10.1rem;">'+
+                '<img src="'+gambarbuku_keranjang[i]+'" alt="">'+
+    
+                '<div class="card-body">'+
+                  '<h5 class="card-text">'+namabuku_keranjang[i]+'</h5>'+
+                  
+                  '<div class="d-flex justify-content-between align-items-center">'+
+                    '<div class="btn-group">'+
+                      '<submit class="btn btn-danger float-right" onclick="deleteitem(' + i + ')">Cancel</submit>'+
+                      
+                    '</div>'+
+                  '</div>'+
+                '</div>'+
+              '</div>'+
+              '</div>'
+
+            }
+          }
+
+          function deleteitem(id) {
+                gambarbuku_keranjang.splice(id,1)
+                namabuku_keranjang.splice(id,1)
+                showlistkeranjangbuku()
+            }
+
+            var namadepan = []
+          var namaterakhir = []
+          var nomortelepon = []
+          var berapalama = []
+          var buku = []
+          var buku2 = []
+          var buku3 = []
+          var date = []
+
+          var tampil = document.getElementById('tampildata')
+            function showData() {
+                tampil.innerHTML = ""
+
+                for(i = 0; i<namadepan.length; i++){
+
+                    tampil.innerHTML +=
+              "<td>"+namadepan[i]+"</td>"+
+              "<td>"+namaterakhir[i]+"</td>"+
+              "<td>"+nomortelepon[i]+"</td>"+
+              "<td>"+berapalama[i]+"</td>"+
+              "<td>"+buku[i]+"</td>"+
+              "<td>"+buku2[i]+"</td>"+
+              "<td>"+buku3[i]+"</td>"+
+              "<td>"+date[i]+"</td>"+
+              "<td>"+
+                    "<button class='btn btn-danger'onclick='Delet("+i+")'>Delete</button>"+
+                "</td>"+  
+              "</tr>"
+                }
+            }
+            showData()
+
+            function add() {
+                var namadepanbaru = document.getElementById('txt_namadepan').value
+                var namaterakhirbaru = document.getElementById('txt_namaterakhir').value
+                var nomorteleponbaru = document.getElementById('txt_nomortelepon').value
+                var berapalamabaru = document.getElementById('txt_berapalama').value
+                var bukubaru = document.getElementById('txt_buku').value
+                var bukubaru2 = document.getElementById('txt_buku2').value
+                var bukubaru3 = document.getElementById('txt_buku3').value
+                var datebaru = document.getElementById('txt_date').value
+                
+
+                namadepan.push(namadepanbaru)
+                namaterakhir.push(namaterakhirbaru)
+                nomortelepon.push(nomorteleponbaru) 
+                berapalama.push(berapalamabaru)
+                buku.push(bukubaru)
+                buku2.push(bukubaru2)
+                buku3.push(bukubaru3)
+                date.push(datebaru)  
+                showData()
+            }
+
+            function Delet(i) {
+              // Metode splice mengubah konten array dengan menghapus atau mengganti elemen yang ada dan/atau menambahkan elemen baru di tempatnya
+              namadepan.splice(i,1)
+              namaterakhir.splice(i,1)
+              nomortelepon.splice(i,1)
+              berapalama.splice(i,1)
+              buku.splice(i,1)
+              buku2.splice(i,1)
+              buku3.splice(i,1)
+              date.splice(i,1)
+
+              showData()
+            }
+
+    </script>
+      
+  </body>
+</html>
